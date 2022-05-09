@@ -9,3 +9,9 @@ const language = document.createElement('p');
 title.classList.add('title');
 title.innerHTML = 'RSS Virtual Keyboard';
 body.append(title);
+
+wraper.classList.add('wraper');
+body.append(wraper);
+
+textarea.classList.add('textarea');
+wraper.append(textarea);

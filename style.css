@@ -23,3 +23,9 @@
     text-align: center;
     padding: 20px 0px;
   }
+
+  .textarea{
+    height: 222px;
+    width: 722px;
+    margin: 10px auto;  
+ }
