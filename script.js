@@ -197,3 +197,13 @@ document.querySelector('.enter').addEventListener('click', () => {
     500,
   );
 });
+
+document.querySelector('.tab').addEventListener('click', () => {
+  textarea.value = `${textarea.value}\u00A0`;
+  setTimeout(
+    () => {
+      document.querySelector('.tab').classList.remove('active');
+    },
+    500,
+  );
+});
