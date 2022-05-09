@@ -264,3 +264,17 @@ document.querySelector('.shiftRight').addEventListener('click', () => {
     }
   });
 });
+
+document.querySelector('.del').addEventListener('click', () => {
+  textarea.focus();
+  let delText = [];
+  delText = textarea.value.split('');
+  delText.splice(textarea.selectionStart, 1);
+  textarea.value = delText.join('');
+  setTimeout(
+    () => {
+      document.querySelector('.del').classList.remove('active');
+    },
+    500,
+  );
+});
