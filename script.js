@@ -219,3 +219,13 @@ document.querySelectorAll('.arrow').forEach((elem) => {
     );
   });
 });
+
+document.querySelector('.space').addEventListener('click', () => {
+  textarea.value = `${textarea.value}\u00A0`;
+  setTimeout(
+    () => {
+      document.querySelector('.space').classList.remove('active');
+    },
+    500,
+  );
+});
