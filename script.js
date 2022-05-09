@@ -187,3 +187,13 @@ document.querySelector('.backspace').addEventListener('click', () => {
     500,
   );
 });
+
+document.querySelector('.enter').addEventListener('click', () => {
+  textarea.value = `${textarea.value}\n`;
+  setTimeout(
+    () => {
+      document.querySelector('.enter').classList.remove('active');
+    },
+    500,
+  );
+});
