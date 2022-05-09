@@ -102,3 +102,10 @@
     height: 40px;
     margin-left: 6px;
   }
+  .active{
+    background-color: orange;
+  }
+  .hover{
+    background-color: blue;
+    cursor: pointer;
+  }

@@ -112,3 +112,36 @@ document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "k
 document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys arrow" keyname = "ArrowRight">&#9655</div>');
 
 document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys ctrl" keyname = "ControlRight">Ctrl</div>');
+
+const keys = document.querySelectorAll('.eng-key');
+const dopKeys = document.querySelectorAll('.dop-keys');
+
+for (let i = 0; i < keys.length; i += 1) {
+  keys[i].setAttribute('keyname', keys[i].innerText);
+}
+document.addEventListener('keydown', (event) => {
+  for (let i = 0; i < keys.length; i += 1) {
+    if (event.key === keys[i].getAttribute('keyname')) {
+      keys[i].classList.add('active');
+    }
+  }
+  for (let i = 0; i < dopKeys.length; i += 1) {
+    if (event.code === dopKeys[i].getAttribute('keyname')) {
+      dopKeys[i].classList.add('active');
+    }
+  }
+});
+textarea.focus();
+document.addEventListener('keyup', (event) => {
+  for (let i = 0; i < keys.length; i += 1) {
+    if (event.key === keys[i].getAttribute('keyname')) {
+      keys[i].classList.remove('active');
+    }
+    textarea.focus();
+  }
+  for (let i = 0; i < dopKeys.length; i += 1) {
+    if (event.code === dopKeys[i].getAttribute('keyname')) {
+      dopKeys[i].classList.remove('active');
+    }
+  }
+});
