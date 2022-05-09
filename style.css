@@ -46,3 +46,59 @@
     margin: 10px auto;
     text-align: center; 
   }
+
+  .keyboard-row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+.keyboard-key{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    margin: 0;
+    margin-left: 6px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 40px;
+}
+.backspace, .capsLock, .shiftLeft{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 40px;
+    margin-left: 6px;
+  }
+  .tab, .del{
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 40px;
+    margin-left: 6px;
+  }
+  .enter, .shiftRight{
+    width: 86px;
+    height: 40px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 40px;
+    margin-left: 6px;
+  }
+  .ctrl, .alt, .win, .arrow{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 40px;
+    margin-left: 6px;
+  }
+  .space{
+    width: 330px;
+    height: 40px;
+    margin-left: 6px;
+  }
