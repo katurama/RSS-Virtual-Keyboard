@@ -3,33 +3,42 @@ const title = document.createElement('p');
 const wraper = document.createElement('div');
 const textarea = document.createElement('textarea');
 const keyboard = document.createElement('div');
+
 const description = document.createElement('p');
 const language = document.createElement('p');
 
+// title
 title.classList.add('title');
 title.innerHTML = 'RSS Virtual Keyboard';
 body.append(title);
 
+// wraper
 wraper.classList.add('wraper');
 body.append(wraper);
 
+// textarea
 textarea.classList.add('textarea');
 wraper.append(textarea);
 
+// keyboard
 keyboard.classList.add('keyboard');
 wraper.append(keyboard);
 
+// description
 description.classList.add('description');
 body.append(description);
 description.innerText = 'Клавиатура создана в операционной системе Windows';
-
+// language
 language.classList.add('language');
 body.append(language);
 language.innerText = 'Для переключения языка : левые Shift + Alt';
 
+// keyboard's keys
 const keyboardWraper = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 113, 119, 101, 114,
   116, 121, 117, 105, 111, 112, 91, 93, 92, 97, 115, 100, 102, 103, 104,
   106, 107, 108, 59, 39, 122, 120, 99, 118, 98, 110, 109, 44, 46, 47];
+
+// keyboard-row
 
 keyboard.insertAdjacentHTML('afterbegin', '<div class = "keyboard-row row5"></div>');
 keyboard.insertAdjacentHTML('afterbegin', '<div class = "keyboard-row row4"></div>');
@@ -145,6 +154,7 @@ document.addEventListener('keyup', (event) => {
     }
   }
 });
+
 keys.forEach((elem) => {
   elem.addEventListener('mouseover', () => {
     elem.classList.add('hover');
@@ -187,7 +197,6 @@ document.querySelector('.backspace').addEventListener('click', () => {
     500,
   );
 });
-
 document.querySelector('.enter').addEventListener('click', () => {
   textarea.value = `${textarea.value}\n`;
   setTimeout(
@@ -197,7 +206,6 @@ document.querySelector('.enter').addEventListener('click', () => {
     500,
   );
 });
-
 document.querySelector('.tab').addEventListener('click', () => {
   textarea.value = `${textarea.value}\u00A0`;
   setTimeout(
@@ -207,7 +215,6 @@ document.querySelector('.tab').addEventListener('click', () => {
     500,
   );
 });
-
 document.querySelectorAll('.arrow').forEach((elem) => {
   elem.addEventListener('click', () => {
     textarea.value += elem.innerText;
@@ -219,7 +226,6 @@ document.querySelectorAll('.arrow').forEach((elem) => {
     );
   });
 });
-
 document.querySelector('.space').addEventListener('click', () => {
   textarea.value = `${textarea.value}\u00A0`;
   setTimeout(
@@ -241,7 +247,6 @@ document.querySelector('.capsLock').addEventListener('click', () => {
     }
   });
 });
-
 document.querySelector('.shiftLeft').addEventListener('click', () => {
   keys.forEach((elem) => {
     if (elem.classList.contains('upperCase')) {
@@ -264,7 +269,6 @@ document.querySelector('.shiftRight').addEventListener('click', () => {
     }
   });
 });
-
 document.querySelector('.del').addEventListener('click', () => {
   textarea.focus();
   let delText = [];
