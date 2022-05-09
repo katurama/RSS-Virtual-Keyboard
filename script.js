@@ -229,3 +229,15 @@ document.querySelector('.space').addEventListener('click', () => {
     500,
   );
 });
+
+document.querySelector('.capsLock').addEventListener('click', () => {
+  keys.forEach((elem) => {
+    if (elem.classList.contains('upperCase')) {
+      elem.classList.remove('upperCase');
+      document.querySelector('.capsLock').classList.remove('active');
+    } else {
+      elem.classList.add('upperCase');
+      document.querySelector('.capsLock').classList.add('active');
+    }
+  });
+});
