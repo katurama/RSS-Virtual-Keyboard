@@ -207,3 +207,15 @@ document.querySelector('.tab').addEventListener('click', () => {
     500,
   );
 });
+
+document.querySelectorAll('.arrow').forEach((elem) => {
+  elem.addEventListener('click', () => {
+    textarea.value += elem.innerText;
+    setTimeout(
+      () => {
+        elem.classList.remove('active');
+      },
+      500,
+    );
+  });
+});
