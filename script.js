@@ -241,3 +241,26 @@ document.querySelector('.capsLock').addEventListener('click', () => {
     }
   });
 });
+
+document.querySelector('.shiftLeft').addEventListener('click', () => {
+  keys.forEach((elem) => {
+    if (elem.classList.contains('upperCase')) {
+      elem.classList.remove('upperCase');
+      document.querySelector('.shiftLeft').classList.remove('active');
+    } else {
+      elem.classList.add('upperCase');
+      document.querySelector('.shiftLeft').classList.add('active');
+    }
+  });
+});
+document.querySelector('.shiftRight').addEventListener('click', () => {
+  keys.forEach((elem) => {
+    if (elem.classList.contains('upperCase')) {
+      elem.classList.remove('upperCase');
+      document.querySelector('.shiftRight').classList.remove('active');
+    } else {
+      elem.classList.add('upperCase');
+      document.querySelector('.shiftRight').classList.add('active');
+    }
+  });
+});
