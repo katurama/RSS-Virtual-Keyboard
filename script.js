@@ -15,3 +15,14 @@ body.append(wraper);
 
 textarea.classList.add('textarea');
 wraper.append(textarea);
+
+keyboard.classList.add('keyboard');
+wraper.append(keyboard);
+
+description.classList.add('description');
+body.append(description);
+description.innerText = 'Клавиатура создана в операционной системе Windows';
+
+language.classList.add('language');
+body.append(language);
+language.innerText = 'Для переключения языка : левые Shift + Alt';
