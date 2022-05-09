@@ -145,3 +145,32 @@ document.addEventListener('keyup', (event) => {
     }
   }
 });
+keys.forEach((elem) => {
+  elem.addEventListener('mouseover', () => {
+    elem.classList.add('hover');
+  });
+  elem.addEventListener('mouseout', () => {
+    elem.classList.remove('hover');
+  });
+  elem.addEventListener('click', () => {
+    elem.classList.add('active');
+    textarea.value += elem.innerText;
+    setTimeout(
+      () => {
+        elem.classList.remove('active');
+      },
+      500,
+    );
+  });
+});
+dopKeys.forEach((elem) => {
+  elem.addEventListener('mouseover', () => {
+    elem.classList.add('hover');
+  });
+  elem.addEventListener('mouseout', () => {
+    elem.classList.remove('hover');
+  });
+  elem.addEventListener('click', () => {
+    elem.classList.add('active');
+  });
+});
