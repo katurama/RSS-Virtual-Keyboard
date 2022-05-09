@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+      height: 600px;
+      margin: 0 auto;
+      width: 1200px;
+  }
+  
+  .wraper {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 36px;
+    color: blue;
+    text-align: center;
+    padding: 20px 0px;
+  }
