@@ -174,3 +174,16 @@ dopKeys.forEach((elem) => {
     elem.classList.add('active');
   });
 });
+
+document.querySelector('.backspace').addEventListener('click', () => {
+  let backspaceText = [];
+  backspaceText = textarea.value.split('');
+  backspaceText.splice(-1, 1);
+  textarea.value = backspaceText.join('');
+  setTimeout(
+    () => {
+      document.querySelector('.backspace').classList.remove('active');
+    },
+    500,
+  );
+});
