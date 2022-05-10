@@ -6,7 +6,7 @@ const keyboard = document.createElement('div');
 
 const description = document.createElement('p');
 const language = document.createElement('p');
-
+const pull = document.createElement('p');
 // title
 title.classList.add('title');
 title.innerHTML = 'RSS Virtual Keyboard';
@@ -32,6 +32,10 @@ description.innerText = 'Клавиатура создана в операцио
 language.classList.add('language');
 body.append(language);
 language.innerText = 'Для переключения языка : левые Shift + Alt';
+
+pull.classList.add('pull');
+body.append(pull);
+pull.innerHTML = '<a href = https://github.com/katurama/RSS-Virtual-Keyboard/pull/1 target = "_blank">Ссылка на Pull Request</a>';
 
 // keyboard's keys
 const keyboardWraper = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 113, 119, 101, 114,
@@ -106,21 +110,21 @@ function initFourthRow() {
 }
 initFourthRow();
 
-document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys ctrl" keyname = "ControlLeft">Ctrl</div>');
+document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys ctrl ctrl-left" keyname = "ControlLeft">Ctrl</div>');
 
 document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys win" keyname = "MetaLeft">Win</div>');
 
-document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys alt" keyname = "AltLeft">Alt</div>');
+document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys alt alt-left" keyname = "AltLeft">Alt</div>');
 
 document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys space" keyname = "Space"></div>');
 
-document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys alt" keyname = "AltRight">Alt</div>');
+document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys alt alt-right" keyname = "AltRight">Alt</div>');
 
 document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys arrow" keyname = "ArrowLeft">&#9665</div>');
 document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys arrow" keyname = "ArrowDown">&#9661</div>');
 document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys arrow" keyname = "ArrowRight">&#9655</div>');
 
-document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys ctrl" keyname = "ControlRight">Ctrl</div>');
+document.querySelector('.row5').insertAdjacentHTML('beforeend', '<div class = "keyboard-key dop-keys ctrl ctrl-right" keyname = "ControlRight">Ctrl</div>');
 
 const keys = document.querySelectorAll('.eng-key');
 const dopKeys = document.querySelectorAll('.dop-keys');
@@ -278,6 +282,55 @@ document.querySelector('.del').addEventListener('click', () => {
   setTimeout(
     () => {
       document.querySelector('.del').classList.remove('active');
+    },
+    500,
+  );
+});
+
+document.querySelector('.ctrl').addEventListener('click', () => {
+  setTimeout(
+    () => {
+      document.querySelector('.ctrl').classList.remove('active');
+    },
+    500,
+  );
+});
+document.querySelector('.win').addEventListener('click', () => {
+  setTimeout(
+    () => {
+      document.querySelector('.win').classList.remove('active');
+    },
+    500,
+  );
+});
+document.querySelector('.alt-left').addEventListener('click', () => {
+  setTimeout(
+    () => {
+      document.querySelector('.alt-left').classList.remove('active');
+    },
+    500,
+  );
+});
+document.querySelector('.alt-right').addEventListener('click', () => {
+  setTimeout(
+    () => {
+      document.querySelector('.alt-right').classList.remove('active');
+    },
+    500,
+  );
+});
+document.querySelector('.ctrl-left').addEventListener('click', () => {
+  setTimeout(
+    () => {
+      document.querySelector('.ctrl-left').classList.remove('active');
+    },
+    500,
+  );
+});
+document.querySelector('.ctrl-right').addEventListener('click', () => {
+  setTimeout(
+    () => {
+      document.querySelector('.ctrl-right').classList.remove('active');
     },
     500,
   );

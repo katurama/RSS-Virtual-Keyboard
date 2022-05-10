@@ -104,8 +104,9 @@
   
   .active{
     background-color: orange;
+    border-radius: 40px;
   }
-  .description, .language{
+  .description, .language, .pull{
     margin: 10px auto;
     text-align: center; 
   }
@@ -116,4 +117,9 @@
   }
   .upperCase{
     text-transform: uppercase;
+  }
+
+  a{
+    color: orange;
+    font-size: 25px;
   }
