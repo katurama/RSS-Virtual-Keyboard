@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+      height: 600px;
+      margin: 0 auto;
+      width: 1200px;
+  }
+  
+  .wraper {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 36px;
+    color: blue;
+    text-align: center;
+    padding: 20px 0px;
+  }
+  
+  .textarea{
+     height: 222px;
+     width: 722px;
+     margin: 10px auto;  
+  }
+  .keyboard{
+      height:251px;
+      width: 715px;
+      border: 3px solid black;
+      border-radius: 10px;
+      background-color: grey;
+      padding: 5px;
+      padding-left: 0;
+      padding-bottom: 0;
+      margin: 0 auto;
+  }
+  
+  .keyboard-row{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 40px;
+      margin-bottom: 8px;
+  }
+  
+  .keyboard-key{
+      width: 40px;
+      height: 40px;
+      background-color: black;
+      color: white;
+      margin: 0;
+      margin-left: 6px;
+      text-align: center;
+      font-weight: 500;
+      line-height: 40px;
+  }
+  .hover{
+    background-color: blue;
+    cursor: pointer;
+  }
+  .backspace, .capsLock, .shiftLeft{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 40px;
+    margin-left: 6px;
+  }
+  .tab, .del{
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 40px;
+    margin-left: 6px;
+  }
+  .enter, .shiftRight{
+    width: 86px;
+    height: 40px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 40px;
+    margin-left: 6px;
+  }
+  .ctrl, .alt, .win, .arrow{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 40px;
+    margin-left: 6px;
+  }
+  .space{
+    width: 330px;
+    height: 40px;
+    margin-left: 6px;
+  }
+  
+  .active{
+    background-color: orange;
+    border-radius: 40px;
+  }
+  .description, .language, .pull{
+    margin: 10px auto;
+    text-align: center; 
+  }
+  
+  .hidden{
+    opacity : 0;
+    visibility: hidden;
+  }
+  .upperCase{
+    text-transform: uppercase;
+  }
+
+  a{
+    color: orange;
+    font-size: 25px;
+  }
